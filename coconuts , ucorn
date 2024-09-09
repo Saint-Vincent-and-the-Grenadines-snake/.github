@@ -1,0 +1,48 @@
+from turtle import Turtle
+import random
+import turtle
+
+
+class Food(Turtle):
+    def __init__(self):
+        super().__init__()
+        banana = ((0, 0), (5, 0), (5, 5), (25, 0), (25, 5), (5, 10), (5, 15), (25, 10), (25, 15), (5, 20), (5, 25), (25, 20), (5, 30), (5, 35), (0, 35))
+        turtle.register_shape("Banana_sh", banana)
+        self.shape('Banana_sh')
+        self.shapesize(0.5, 0.5)
+        self.penup()
+        self.color('yellow')
+        self.speed('fastest')
+        self.penup()
+        self.refresh()
+
+    def __init__(self):
+        super().__init__()
+        kokonut = ((0, 0), (0, 10), (5, 13), (10, 10), (10, 0), (5, -3))
+        turtle.register_shape("kokonut_sh", kokonut)
+        self.shape('kokonut_sh')
+        self.shapesize(0.5, 0.5)
+        self.penup()
+        self.color('saddlebrown')
+        self.speed('fastest')
+        self.penup()
+        self.refresh()
+
+    def __init__(self):
+        super().__init__()
+        ucorn=(0, 0), (0, 10), (18, 10), (18, 17), (23, 17), (23, 10), (25, 10), (25, 0), (16, 0), (16, -6), (10, (10, 0))
+        turtle.register_shape("ucorn_sh", ucorn)
+        self.shape('ucorn_sh')
+        self.shapesize(0.5, 0.5)
+        self.penup()
+        self.color('tan')
+        self.speed('fastest')
+        self.penup()
+        self.refresh()
+
+
+
+    def refresh(self):
+        rand_x = random.randint(-260, 280)
+        rand_y = random.randint(-260, 280)
+        self.goto(rand_x, rand_y)
